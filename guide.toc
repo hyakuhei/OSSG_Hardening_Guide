@@ -1,0 +1,13 @@
+\contentsline {section}{\numberline {1}Warnings}{2}
+\contentsline {section}{\numberline {2}Trademark Information}{2}
+\contentsline {section}{\numberline {3}Introduction}{4}
+\contentsline {section}{\numberline {4}Notes for Auditors}{4}
+\contentsline {section}{\numberline {5}Security Objectives}{4}
+\contentsline {section}{\numberline {6}Nova}{5}
+\contentsline {subsection}{\numberline {6.1}Direct Threats}{5}
+\contentsline {subsection}{\numberline {6.2}Hypervisor Security}{5}
+\contentsline {subsubsection}{\numberline {6.2.1}General measures for securing hypervisors and VM services}{5}
+\contentsline {subsubsection}{\numberline {6.2.2}Xen Security}{5}
+\contentsline {subsubsection}{\numberline {6.2.3}KVM Security}{5}
+\contentsline {subsubsection}{\numberline {6.2.4}LXC}{5}
+\contentsline {subsubsection}{\numberline {6.2.5}HyperV}{5}

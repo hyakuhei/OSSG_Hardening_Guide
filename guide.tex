@@ -1,10 +1,31 @@
-\documentclass[12pt]{article}
-\begin{document}
-
-% Document maintained and updated via GIT: 
-% git@github.com:hyakuhei/OSSG_Hardening_Guide.git
+\documentclass[12pt, a4paper, twoside, titlepage]{article}
+% In my experience, we'll probably need these soon
+%\usepackage{lgrind}
+%\usepackage[pdftex]{graphicx}
+%\usepackage{ulem}
+\usepackage{url}
+%\pagestyle{plain}
 
 \title{OpenStack Hardening Guide}
+\author{OpenStack Security Group}
+\date{\today}
 
+\begin{document}
+
+%\tableofcontents
+
+\maketitle
+
+\include{title_preamble}
+\include{contents}
+\include{intro}
+\include{nova}
+\include{swift}
+
+%\include{title_preamble}
+
+%\pagestyle{plain}
+%\include{contents}
+%\include{intro}
 
 \end{document}

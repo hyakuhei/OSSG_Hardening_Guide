@@ -1,20 +1,36 @@
-ifeq ($(TARGET_OS),linux)
+UNAME= $(shell uname)
+LATEX= pdflatex
+BIBTEX= bibtex
+.SUFFIXES: .pdf .tex .aux
+
+DOCS= guide.pdf
+TEX= guide.tex
+
+ifeq ($(UNAME),Linux)
 VIEWER="evince"
-else
+else ifeq ($(UNAME),Darwin)
+VIEWER="open"
+else 
 VIEWER="C:\Program Files (x86)\Foxit Software\Foxit Reader\Foxit Reader.exe"
 endif
 
-default: compile display clean
+all: $(DOCS)
 
-compile:
-	pdflatex guide.tex
+$(DOCS): $(TEX)
+
+.tex.pdf:
+	$(LATEX) $<
+	#$(BIBTEX) $*
+	$(LATEX) $<
+	echo "----- only worry about warnings after this line -----"
+	$(LATEX) $<
 
 display:
-	$(VIEWER) guide.pdf
+	$(VIEWER) $(DOCS)
 
 clean:
-	rm guide.pdf
-	rm *.aux
-	rm *.log
-	rm *.lof
-	
+	rm -f $(DOCS)
+	make clear
+
+clear:
+	rm -f *.aux *.log *.toc *.dvi *.bbl *.blg *.lot *.lof *.out *.brf *.lol *~

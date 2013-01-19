@@ -1,0 +1,86 @@
+Front Matter
+* Contributors
+* Changelog
+
+Introduction
+* General principles
+  - Assume attackers are in all parts of the cloud
+    - Use layered security
+    - Use least privilege
+    - Use encryption and authentication
+  - Isolate components to the greatest degree possible
+  - Keep it simple, reduce amount of software
+  - Continuously monitor and verify cloud
+* How to use this guide
+  - All clouds are different, read sections that apply to you
+  - Test in a non-production environment
+  - Provide feedback and help improve the guide
+
+OpenStack Overview
+* OpenStack Core Projects vs Production OpenStack Deployment
+  - deployment involves much more than just core projects
+  - many configuration options
+  - many architectural decisions
+* Generic view of an OpenStack deployment
+
+Architecture Guidance
+* Looking at key decision points and how they affect security
+  - provide the information needed to understand security relavence of choices
+  - don't necessarily suggest a specific choice, unless there're clear winners
+  - largely point to sections below for additional details
+* Configuration options for core projects
+* How to organize software on controller(s)
+* Choice of external projects necessary for deployment (e.g., hypervisor)
+
+OpenStack Projects
+* Compute (Nova)
+  - Direct Threats
+  - Configuration Guideance
+  - Hypervisor Security
+    - General measures for securing hypervisors
+    - Refer to sectio below in hypervisor security
+* Storage (Swift)
+  - Direct Threats
+  - Configuration Guideance
+  - SSL Stuff
+* Networking (Quantam)
+  - Direct Threats
+  - Configuration Guideance
+* Dashboard (Horizon)
+  - Direct Threats
+  - Configuration Guideance
+* Identity (Keystone)
+  - Direct Threats
+  - Configuration Guideance
+* Image (Glance)
+  - Direct Threats
+  - Configuration Guideance
+
+Related Projects
+* Virtualization / Containers
+  - KVM [most common]
+  - Xen
+  - LXC
+  - HyperV ??
+* SSL Termination
+  - Stud
+  - Pound
+  - Stunnel
+* HAProxy
+* Messaging
+  - RabbitMQ [most common]
+  - QPid
+  - ZeroMQ
+* Database
+  - Mysql [most common]
+  - what else are people using?
+* NTP
+* General Linux Hardening
+  - Beyond scope, see NSA Guide to the Secure Configuration of
+    Red Hat Enterprise Linux 5, June 2012 (useful for all distros)
+
+Other OpenStack Security Guideance
+* Security Notes
+* Vulnerability Reports
+
+Conclusions

@@ -8,8 +8,11 @@ Introduction
     - Use layered security
     - Use least privilege
     - Use encryption and authentication
-  - Isolate components to the greatest degree possible
-  - Keep it simple, reduce amount of software
+  - Reduce attack surface
+    - Isolate components to the greatest degree possible
+      - Mandetory Access Controls, AppArmour/SELinux
+      - Containers 
+    - Keep it simple, reduce amount of software
   - Continuously monitor and verify cloud
 * How to use this guide
   - All clouds are different, read sections that apply to you
